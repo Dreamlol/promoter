@@ -191,12 +191,13 @@ func init() {
 
 //ImageNameAndRegistry returns registry, image from provided fqdn
 func ImageNameAndRegistry(url string) (registry string, image string, err error) {
-	s := strings.Split(url, "/")
+	s := strings.Split(url, "@")
 	if len(s) < 3 {
 		return "", "", errors.New("invalid image reference. Image format should be following: [registry/repository/image] e.g. myregistry/repository/centos")
 	}
 	registry = s[0]
-	image = s[1] + "/" + s[2]
+	//image = s[1] + "/" + s[2]
+	image = s[1]
 	return registry, image, nil
 
 }
