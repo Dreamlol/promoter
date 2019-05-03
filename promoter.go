@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dreamlol/promoter/cmd"
+	"github.com/Dreamlol/promoter/cmd"
 	"os"
 )
 
