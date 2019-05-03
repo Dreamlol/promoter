@@ -11,7 +11,7 @@ import (
 	"github.com/docker/distribution/digest"
 	"github.com/docker/distribution/manifest"
 	manifestV1 "github.com/docker/distribution/manifest/schema1"
-	"github.com/vbaksa/promoter/progressbar"
+	"github.com/Dreamlol/promoter/progressbar"
 
 	"github.com/docker/libtrust"
 	"github.com/dustin/go-humanize"

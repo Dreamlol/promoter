@@ -10,9 +10,9 @@ install: true
 before_deploy:
   - mkdir -p release
   - "GOOS=linux  GOARCH=amd64 go build -ldflags \"-X github.com/Dreamlol/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-linux-amd64"
-#  - "GOOS=linux  GOARCH=arm GOARM=5 go build -ldflags \"-X github.com/vbaksa/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-linux-arm"
-#  - "GOOS=darwin GOARCH=amd64 go build -ldflags \"-X github.com/vbaksa/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-darwin-amd64"
-#  - "GOOS=windows GOARCH=amd64 go build -ldflags \"-X github.com/vbaksa/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-windows.exe"
+#  - "GOOS=linux  GOARCH=arm GOARM=5 go build -ldflags \"-X github.com/Dreamlol/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-linux-arm"
+#  - "GOOS=darwin GOARCH=amd64 go build -ldflags \"-X github.com/Dreamlol/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-darwin-amd64"
+#  - "GOOS=windows GOARCH=amd64 go build -ldflags \"-X github.com/Dreamlol/promoter/cmd.version=$TRAVIS_TAG\" -o release/promoter-$TRAVIS_TAG-windows.exe"
 
 # this tells travis-ci to create a github release and deploy artifacts to
 # github _only_ when there is a tag associated with a commit. That is what the tags: true means.

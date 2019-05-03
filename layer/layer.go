@@ -9,7 +9,7 @@ import (
 	manifestV1 "github.com/docker/distribution/manifest/schema1"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/heroku/docker-registry-client/registry"
-	"github.com/vbaksa/promoter/progressbar"
+	"github.com/Dreamlol/promoter/progressbar"
 )
 
 type layerCheckResult struct {

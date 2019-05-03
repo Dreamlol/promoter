@@ -13,8 +13,8 @@ import (
 
 	"github.com/docker/libtrust"
 	"github.com/dustin/go-humanize"
-	"github.com/vbaksa/promoter/connection"
-	"github.com/vbaksa/promoter/layer"
+	"github.com/Dreamlol/promoter/connection"
+	"github.com/Dreamlol/promoter/layer"
 
 	"gopkg.in/cheggaaa/pb.v1"
 )

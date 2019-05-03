@@ -7,8 +7,8 @@ import (
 
 	"os"
 
-	"github.com/vbaksa/promoter/image"
-	"github.com/vbaksa/promoter/tags"
+	"github.com/Dreamlol/promoter/image"
+	"github.com/Dreamlol/promoter/tags"
 
 	"errors"
 
