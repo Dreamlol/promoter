@@ -204,14 +204,14 @@ func ImageNameAndRegistry(url string) (registry string, image string, err error)
 
 //ImageNameAndRegistryAndTag returns registry, image and tag from provided fqdn
 func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag string, err error) {
-	s := strings.Split(src, "/")
+	s := strings.Split(src, "@")
 	fmt.Println("With tags -------- function")
-	if len(s) < 3 {
-		return "", "", "", errors.New("invalid image reference. Image format should be following: [registry/repository/image] e.g. hub.docker.io/library/centos")
-
+	if len(s) < 2 {
+		return "", "", "", errors.New("invalid image reference. Image format should be following: [registry@image:tag] e.g. hub.docker.io/library/centos")
 	}
 	registry = s[0]
-	image = s[1] + "/" + s[2]
+	//image = s[1] + "/" + s[2]
+	image = s[1]
 	imageAndTag := strings.Split(image, ":")
 	//Image name and tag specified
 	if len(imageAndTag) > 1 {
@@ -219,7 +219,8 @@ func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag 
 		tag = imageAndTag[1]
 	} else {
 		//No tag specified
-		image = s[1] + "/" + s[2]
+		//image = s[1] + "/" + s[2]
+		image = s[1]
 		tag = "latest"
 	}
 	return registry, image, tag, nil
