@@ -192,6 +192,7 @@ func init() {
 //ImageNameAndRegistry returns registry, image from provided fqdn
 func ImageNameAndRegistry(url string) (registry string, image string, err error) {
 	s := strings.Split(url, "/")
+	fmt.Println("Without! tags -------- function")
 	if len(s) < 3 {
 		return "", "", errors.New("invalid image reference. Image format should be following: [registry/repository/image] e.g. myregistry/repository/centos")
 	}
@@ -204,6 +205,7 @@ func ImageNameAndRegistry(url string) (registry string, image string, err error)
 //ImageNameAndRegistryAndTag returns registry, image and tag from provided fqdn
 func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag string, err error) {
 	s := strings.Split(src, "/")
+	fmt.Println("With tags -------- function")
 	if len(s) < 3 {
 		return "", "", "", errors.New("invalid image reference. Image format should be following: [registry/repository/image] e.g. hub.docker.io/library/centos")
 
