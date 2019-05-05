@@ -1,6 +1,6 @@
 # Docker Image Promoter
 
-image:https://travis-ci.org/vbaksa/promoter.svg?branch=master["Build Status", link="https://travis-ci.org/vbaksa/promoter"] image:https://goreportcard.com/badge/github.com/vbaksa/promoter["Go Report Card", link="https://goreportcard.com/report/github.com/vbaksa/promoter"]
+image:https://travis-ci.org/Dreamlol/promoter.svg?branch=master["Build Status", link="https://travis-ci.org/Dreamlol/promoter"] 
 
 Image Promoter is a tool to promote Docker images between image registries.
 
