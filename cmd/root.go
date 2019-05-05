@@ -205,8 +205,8 @@ func ImageNameAndRegistry(url string) (registry string, image string, err error)
 //ImageNameAndRegistryAndTag returns registry, image and tag from provided fqdn
 func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag string, err error) {
 	s := strings.Split(src, "@")
-	fmt.Println("With tags -------- function")
-	if len(s) < 2 {
+	fmt.Println("With tags -------- function", len(s))
+	if len(s) < 1 {
 		return "", "", "", errors.New("invalid image reference. Image format should be following: [registry@image:tag] e.g. hub.docker.io/library/centos")
 	}
 	registry = s[0]
