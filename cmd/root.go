@@ -212,12 +212,12 @@ func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag 
 	registry = s[0]
 	//image = s[1] + "/" + s[2]
 	image = s[1]
-	imageAndTag := strings.Split(image, ":")
+	imageAndTag := strings.Split(image, "%")
 	//Image name and tag specified
 	if len(imageAndTag) > 1 {
 		image = imageAndTag[0]
 		tag = imageAndTag[1]
-		fmt.Println("I and T", image, tag)
+		fmt.Println("I and T: ", image, tag)
 	} else {
 		//No tag specified
 		//image = s[1] + "/" + s[2]
