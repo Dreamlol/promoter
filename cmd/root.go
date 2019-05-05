@@ -217,6 +217,7 @@ func ImageNameAndRegistryAndTag(src string) (registry string, image string, tag 
 	if len(imageAndTag) > 1 {
 		image = imageAndTag[0]
 		tag = imageAndTag[1]
+		fmt.Println("I and T", image, tag)
 	} else {
 		//No tag specified
 		//image = s[1] + "/" + s[2]
